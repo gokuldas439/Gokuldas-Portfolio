@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Send, Github, Linkedin, Mail, Twitter } from 'lucide-react';
@@ -19,11 +18,10 @@ const Contact: React.FC = () => {
   ];
 
   return (
-    <section id="contact" className="py-24 px-6 relative">
+    <section id="contact" className="py-20 px-6 relative">
       <div className="container mx-auto">
         <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16">
           
-          {/* Contact Info */}
           <div>
             <motion.h2 
               initial={{ opacity: 0, y: 20 }}
@@ -75,14 +73,12 @@ const Contact: React.FC = () => {
             </div>
           </div>
 
-          {/* Contact Form */}
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             className="glass p-10 rounded-3xl border-white/5 relative group overflow-hidden"
           >
-            {/* Form Glow Effect */}
             <div className="absolute top-0 right-0 -translate-y-1/2 translate-x-1/2 w-48 h-48 bg-orange-500/10 blur-3xl rounded-full" />
             
             <form onSubmit={handleSubmit} className="relative z-10 space-y-6">

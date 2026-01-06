@@ -24,21 +24,22 @@ const App: React.FC = () => {
         </section>
         
         <div className="space-y-0">
-          <section id="about" className="scroll-mt-24">
+          {/* Reduced scroll-mt to match smaller paddings */}
+          <section id="about" className="scroll-mt-16">
             <About />
           </section>
           
           <Skills />
           
-          <section id="projects" className="scroll-mt-24">
+          <section id="projects" className="scroll-mt-16">
             <Projects />
           </section>
           
-          <section id="experience" className="scroll-mt-24">
+          <section id="experience" className="scroll-mt-16">
             <Experience />
           </section>
           
-          <section id="contact" className="scroll-mt-24">
+          <section id="contact" className="scroll-mt-16">
             <Contact />
           </section>
         </div>

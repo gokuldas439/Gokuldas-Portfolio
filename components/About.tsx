@@ -1,11 +1,10 @@
-
 import React from 'react';
 import { motion } from 'framer-motion';
 import TiltCard from './TiltCard';
 
 const About: React.FC = () => {
   return (
-    <section id="about" className="py-24 px-6 relative overflow-hidden">
+    <section id="about" className="pt-12 pb-20 px-6 relative overflow-hidden">
       <div className="container mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <motion.div

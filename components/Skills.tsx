@@ -1,8 +1,6 @@
-
 import React from 'react';
 import { motion } from 'framer-motion';
 import { SKILLS } from '../constants';
-// Fixed: Tooltip is not a valid exported icon in lucide-react. Changed to Terminal.
 import { Cpu, Layers, HardDrive, Globe, Terminal } from 'lucide-react';
 
 const Skills: React.FC = () => {
@@ -11,12 +9,11 @@ const Skills: React.FC = () => {
     { name: 'Backend', icon: <Cpu size={20} />, accent: 'purple' },
     { name: 'Database', icon: <HardDrive size={20} />, accent: 'orange' },
     { name: 'Cloud', icon: <Globe size={20} />, accent: 'blue' },
-    // Fixed: Updated icon from non-existent Tooltip to Terminal
     { name: 'Tools', icon: <Terminal size={20} />, accent: 'slate' }
   ];
 
   return (
-    <section id="skills" className="py-32 px-6 relative overflow-hidden">
+    <section id="skills" className="py-20 px-6 relative overflow-hidden">
       <div className="container mx-auto max-w-7xl">
         <div className="flex flex-col md:flex-row items-end justify-between mb-20 gap-8">
           <div className="max-w-2xl">
@@ -59,10 +56,8 @@ const Skills: React.FC = () => {
                 transition={{ delay: idx * 0.1 }}
                 className={`group relative glass rounded-2xl p-8 border-white/5 overflow-hidden transition-all duration-500 hover:border-cyan-500/30 hover:shadow-[0_0_30px_rgba(34,211,238,0.1)] ${isWide ? 'lg:col-span-6' : 'lg:col-span-4'}`}
               >
-                {/* Holographic Scan Line Effect */}
                 <div className="absolute inset-0 bg-gradient-to-b from-transparent via-cyan-400/5 to-transparent h-1/2 w-full -translate-y-full group-hover:animate-[scan_3s_linear_infinite] pointer-events-none" />
                 
-                {/* Decorative Brackets */}
                 <div className="absolute top-4 left-4 w-4 h-4 border-t-2 border-l-2 border-white/10 group-hover:border-cyan-400/50 transition-colors" />
                 <div className="absolute bottom-4 right-4 w-4 h-4 border-b-2 border-r-2 border-white/10 group-hover:border-cyan-400/50 transition-colors" />
 
@@ -88,7 +83,6 @@ const Skills: React.FC = () => {
                   ))}
                 </div>
 
-                {/* Cyber Background Detail */}
                 <div className="absolute -bottom-8 -right-8 opacity-[0.03] group-hover:opacity-[0.07] transition-opacity">
                   <div className="text-[120px] font-bold select-none leading-none">0{idx + 1}</div>
                 </div>

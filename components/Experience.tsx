@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { motion, useScroll, useSpring } from 'framer-motion';
 import { EXPERIENCES } from '../constants';
@@ -11,30 +10,28 @@ const Experience: React.FC = () => {
     offset: ["start center", "end center"]
   });
 
-  // Balanced spring settings for smooth but responsive visual feedback
   const scaleY = useSpring(scrollYProgress, { stiffness: 120, damping: 35 });
 
   return (
-    <section id="experience" className="py-24 px-6 relative overflow-hidden scroll-mt-24">
+    <section id="experience" className="py-20 px-6 relative overflow-hidden scroll-mt-24">
       <div className="container mx-auto max-w-5xl">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="mb-20 text-center"
+          className="mb-16 text-center"
         >
           <h2 className="text-4xl md:text-6xl font-bold mb-4">The <span className="text-cyan-400">Journey</span></h2>
           <p className="text-slate-400">My professional trajectory through the tech landscape.</p>
         </motion.div>
 
         <div ref={containerRef} className="relative">
-          {/* Optimized vertical line with GPU hint */}
           <motion.div 
             style={{ scaleY, originY: 0 }}
             className="absolute left-0 md:left-1/2 md:-translate-x-1/2 top-0 bottom-0 w-[2px] bg-gradient-to-b from-cyan-400 via-purple-500 to-orange-500 z-0 will-change-transform"
           />
 
-          <div className="space-y-20 relative z-10">
+          <div className="space-y-16 relative z-10">
             {EXPERIENCES.map((exp, idx) => (
               <div key={exp.id} className={`flex flex-col md:flex-row gap-12 ${idx % 2 !== 0 ? 'md:flex-row-reverse' : ''}`}>
                 <div className="absolute left-0 md:left-1/2 md:-translate-x-1/2 w-4 h-4 rounded-full bg-slate-950 border-2 border-cyan-400 z-10 mt-8 hidden md:block" />
@@ -82,7 +79,7 @@ const Experience: React.FC = () => {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="mt-24 glass p-8 rounded-3xl border-white/5 max-w-3xl mx-auto flex flex-col md:flex-row items-center gap-8 group hover:border-cyan-400/20 transition-all duration-500"
+          className="mt-20 glass p-8 rounded-3xl border-white/5 max-w-3xl mx-auto flex flex-col md:flex-row items-center gap-8 group hover:border-cyan-400/20 transition-all duration-500"
         >
           <div className="w-16 h-16 glass rounded-2xl flex items-center justify-center text-cyan-400 shrink-0 group-hover:scale-110 transition-transform">
              <Briefcase size={32} />

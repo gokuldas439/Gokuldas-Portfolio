@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Github, ExternalLink } from 'lucide-react';
@@ -7,7 +6,7 @@ import TiltCard from './TiltCard';
 
 const Projects: React.FC = () => {
   return (
-    <section id="projects" className="py-24 px-6 relative">
+    <section id="projects" className="py-20 px-6 relative">
       <div className="container mx-auto">
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16">
           <div>
@@ -61,7 +60,6 @@ const Projects: React.FC = () => {
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                   />
                   
-                  {/* Overlay Content */}
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/60 to-transparent p-8 flex flex-col justify-end">
                     <div className="flex justify-between items-start mb-4">
                       <div className="space-y-1">
