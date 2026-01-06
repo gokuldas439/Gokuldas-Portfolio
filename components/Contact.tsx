@@ -7,12 +7,22 @@ const Contact: React.FC = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    alert("This is a demo. Message feature is not connected to a backend.");
+    
+    // Constructing the mailto link for frontend-only submission
+    const recipient = "gokuldas439@gmail.com";
+    const subject = encodeURIComponent(`New Project Inquiry from ${formData.name}`);
+    const body = encodeURIComponent(
+      `Name: ${formData.name}\n` +
+      `Email: ${formData.email}\n\n` +
+      `Message:\n${formData.message}`
+    );
+    
+    window.location.href = `mailto:${recipient}?subject=${subject}&body=${body}`;
   };
 
   const socials = [
     { icon: <Github size={20} />, link: 'https://github.com/gokuldas439', color: 'hover:text-white' },
-    { icon: <Linkedin size={20} />, link: '#', color: 'hover:text-blue-500' },
+    { icon: <Linkedin size={20} />, link: 'https://www.linkedin.com/in/gokuldas439/', color: 'hover:text-blue-500' },
     { icon: <Twitter size={20} />, link: '#', color: 'hover:text-cyan-400' },
     { icon: <Mail size={20} />, link: 'mailto:gokuldas439@gmail.com', color: 'hover:text-red-400' },
   ];
@@ -87,7 +97,7 @@ const Contact: React.FC = () => {
                 <input 
                   type="text" 
                   placeholder="John Doe"
-                  className="w-full bg-white/5 border border-white/10 rounded-xl px-6 py-4 outline-none focus:border-cyan-500 focus:bg-white/10 transition-all"
+                  className="w-full bg-white/5 border border-white/10 rounded-xl px-6 py-4 outline-none focus:border-cyan-500 focus:bg-white/10 transition-all text-white"
                   onChange={(e) => setFormData({...formData, name: e.target.value})}
                   required
                 />
@@ -98,7 +108,7 @@ const Contact: React.FC = () => {
                 <input 
                   type="email" 
                   placeholder="john@example.com"
-                  className="w-full bg-white/5 border border-white/10 rounded-xl px-6 py-4 outline-none focus:border-cyan-500 focus:bg-white/10 transition-all"
+                  className="w-full bg-white/5 border border-white/10 rounded-xl px-6 py-4 outline-none focus:border-cyan-500 focus:bg-white/10 transition-all text-white"
                   onChange={(e) => setFormData({...formData, email: e.target.value})}
                   required
                 />
@@ -109,7 +119,7 @@ const Contact: React.FC = () => {
                 <textarea 
                   rows={4}
                   placeholder="Tell me about your project..."
-                  className="w-full bg-white/5 border border-white/10 rounded-xl px-6 py-4 outline-none focus:border-cyan-500 focus:bg-white/10 transition-all resize-none"
+                  className="w-full bg-white/5 border border-white/10 rounded-xl px-6 py-4 outline-none focus:border-cyan-500 focus:bg-white/10 transition-all resize-none text-white"
                   onChange={(e) => setFormData({...formData, message: e.target.value})}
                   required
                 ></textarea>
