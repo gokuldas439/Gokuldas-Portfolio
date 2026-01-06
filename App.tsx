@@ -1,4 +1,3 @@
-
 import React from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
@@ -13,13 +12,13 @@ import BackgroundEffect from './components/BackgroundEffect';
 
 const App: React.FC = () => {
   return (
-    <div className="relative text-slate-100 selection:bg-cyan-500 selection:text-white bg-slate-950">
+    <div className="relative min-h-screen w-full text-slate-100 selection:bg-cyan-500 selection:text-white bg-slate-950 overflow-x-hidden">
       <CustomCursor />
       <BackgroundEffect />
       
       <Navbar />
       
-      <main>
+      <main className="relative z-10">
         <section id="hero" className="scroll-mt-0">
           <Hero />
         </section>

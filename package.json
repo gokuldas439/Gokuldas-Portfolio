@@ -1,6 +1,5 @@
-
 {
-  "name": "gokuldas-portfolio",
+  "name": "gokuldas-k-portfolio",
   "private": true,
   "version": "1.0.0",
   "type": "module",
@@ -11,13 +10,13 @@
   },
   "dependencies": {
     "framer-motion": "^12.24.0",
-    "lucide-react": "^0.462.0",
-    "react": "^19.2.3",
-    "react-dom": "^19.2.3"
+    "lucide-react": "^0.475.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
   },
   "devDependencies": {
-    "@types/react": "^19.2.3",
-    "@types/react-dom": "^19.2.3",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
     "@vitejs/plugin-react": "^4.3.4",
     "autoprefixer": "^10.4.20",
     "postcss": "^8.4.49",
